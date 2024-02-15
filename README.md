@@ -8,7 +8,9 @@ There are a few histograms and selectboxes that will help you to get more inform
 To implement this project have been used libraries such as pandas, streamlit, plotly and pyplot and streamlit methods such as st.write, st.title, st.checkbox, st.plotly chart and so on.
 
 To launch this project on your local machine you should open the car_app.py file and write in the terminal  python3 -m streamlit run .\car_app.py    
+You can open the application also by using the following URL:
 
+https://exploring-used-cars-dataset.onrender.com
 
 
 The directory has:
