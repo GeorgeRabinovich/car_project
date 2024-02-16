@@ -6,7 +6,17 @@ import plotly.express as px
 
 df = pd.read_csv('vehicles_us.csv')  #reading the csv file
 
-columns_to_replace = ['model_year', 'cylinders', 'odometer', 'paint_color', 'is_4wd']
+# filling the missing values in 'model_year' column using median and grouping by model
+df['model_year'] = df['model_year'].astype(float)  # Convert to numerical type
+df['model_year'] = df['model_year'].fillna(df.groupby('model')['model_year'].transform('median'))
+
+# filling the missing values in 'cylinders' column using median and grouping by model
+df['cylinders'] = df['cylinders'].fillna(df.groupby('model')['cylinders'].transform('median'))
+
+# filling the missing values in 'odometer' column using median and grouping by model
+df['odometer'] = df['odometer'].fillna(df.groupby('model')['odometer'].transform('median'))
+
+columns_to_replace = ['paint_color', 'is_4wd']
 
 for column in columns_to_replace:
     df[column] = df[column].fillna('unknown')
