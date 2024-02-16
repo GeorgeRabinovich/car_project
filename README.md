@@ -19,3 +19,7 @@ vehicles_us.csv file that is car advertisment dataset
 notebook folder that contains EDA.ipynb (Jupiter notebook) file that used for exploring and preprocessing data, the code and important marks about the code. 
 requirements.txt file with required packages
 .streamlit directory that contains config.toml file with streamlit configurations 
+
+
+To reviewer: 
+Excuse me, I don't know why it was old version of EDA.ipynb without any histogram and with broken code. Please check an updates.
